@@ -179,7 +179,8 @@ jQuery(document).ready(function() {
                 var text, clip = new Clipboard('.copy-to-clipboard', {
                     text: function(trigger) {
                         text = $(trigger).prev('code').text();
-                        return text.replace(/^\$\s/gm, '');
+                        // NOTE custom stuff to strip # or $ from the beginning of my inline command blocks
+                        return text.replace(/^[\$\s\#\$]{1,4}/gm, '');
                     }
                 });
 
