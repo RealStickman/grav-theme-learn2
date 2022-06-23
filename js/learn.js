@@ -94,7 +94,6 @@ jQuery(document).ready(function() {
         return false;
     });
 
-    // NOTE this seems to call the scrollbar from jquery.scrollbar https://gromo.github.io/jquery.scrollbar/
     jQuery('.scrollbar-inner').scrollbar();
 
     jQuery('[data-sidebar-toggle]').on('click', function() {
